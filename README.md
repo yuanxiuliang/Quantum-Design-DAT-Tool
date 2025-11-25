@@ -10,25 +10,25 @@ Rebuilt in .NET 8/WPF from the original Python utility. The app parses Quantum D
 
 ## Install for Windows Users
 
-1. **Install .NET 8 Desktop Runtime (if prompted)**  
-   - Most users可以直接运行安装程序；如果系统缺少 .NET 8 Desktop Runtime，安装器会弹出提示并打开官方下载页面。  
-   - 在该页面安装“**.NET 8 Desktop Runtime (x64)**”，安装完成后重新运行 Quantum Design DAT Tool 安装程序。
-2. **运行安装程序**  
-   - 直接点击这里下载最新安装包：  
-     `[下载 QuantumDatToolSetup.exe](https://github.com/yuanxiuliang/Quantum-Design-DAT-Tool/releases/latest/download/QuantumDatToolSetup.exe)`  
-   - 下载完成后，双击 `QuantumDatToolSetup.exe`（标准 Windows 安装包），按向导一步步完成安装。  
-   - 默认安装路径为 `C:\Program Files\Quantum Design DAT Tool`，可根据需要修改。
-3. **启动程序**  
-   - 通过「开始菜单 → Quantum Design DAT Tool」或桌面快捷方式启动。  
-   - 安装器会注册 `.dat` 文件扩展名，之后在资源管理器中双击任意 `.dat` 文件，会自动启动本程序并绘制数据图。
-4. **卸载程序**  
-   - 打开「设置 → 应用 → 已安装的应用」（或「控制面板 → 程序和功能」），找到 **Quantum Design DAT Tool** 并卸载。  
-   - 卸载会一并移除开始菜单/桌面快捷方式以及 `.dat` 关联设置。
+1. **Install .NET 8 Desktop Runtime (only if prompted)**  
+   - Most users can simply run the installer; if the system is missing .NET 8 Desktop Runtime, the setup will show a message and open the official download page.  
+   - On that page, install **.NET 8 Desktop Runtime (x64)**, then re‑run the Quantum Design DAT Tool installer.
+2. **Run the installer**  
+   - Click the link below to download the latest setup package directly:  
+     [Download QuantumDatToolSetup.exe](https://github.com/yuanxiuliang/Quantum-Design-DAT-Tool/releases/latest/download/QuantumDatToolSetup.exe)  
+   - After the download finishes, double‑click `QuantumDatToolSetup.exe` (standard Windows installer) and follow the wizard.  
+   - The default install path is `C:\Program Files\Quantum Design DAT Tool`, but you can change it if needed.
+3. **Launch the app**  
+   - Use the Start menu entry **Quantum Design DAT Tool** or the optional desktop shortcut.  
+   - The installer also registers the `.dat` file extension, so double‑clicking any `.dat` file in Explorer will open it in this tool and plot the data.
+4. **Uninstall**  
+   - Open **Settings → Apps → Installed apps** (or **Control Panel → Programs and Features**), find **Quantum Design DAT Tool**, and uninstall it.  
+   - Uninstalling removes the Start menu entry, desktop shortcut, and `.dat` file association.
 
 ## Quick Start (for portable/manual runs)
 
 1. Copy the contents of `DatTool.UI/bin/Release/net8.0-windows10.0.19041/win-x64/publish/` to the target folder.
-2. Double-click `DatTool.UI.exe`（这种“便携运行”方式主要面向开发者或高级用户；普通用户推荐使用安装程序）。
+2. Double-click `DatTool.UI.exe` (this “portable” mode is intended for developers or advanced users; normal users should prefer the installer).
 3. Click **Open DAT** on the left to pick a file (PPMS/VSM DAT files are supported).
 4. The app will:
    - Parse headers, columns, and metadata;
