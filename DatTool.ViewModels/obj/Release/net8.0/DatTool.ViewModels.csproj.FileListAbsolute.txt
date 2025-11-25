@@ -15,3 +15,4 @@ C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Release\net8.0\refint\DatTool.ViewModels.dll
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Release\net8.0\DatTool.ViewModels.pdb
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Release\net8.0\ref\DatTool.ViewModels.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Release\net8.0\DatTool.ViewModels.sourcelink.json

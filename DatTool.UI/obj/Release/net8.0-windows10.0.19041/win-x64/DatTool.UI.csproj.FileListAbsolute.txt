@@ -36,3 +36,4 @@ C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\obj\Rel
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\obj\Release\net8.0-windows10.0.19041\win-x64\DatTool.UI.pdb
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\obj\Release\net8.0-windows10.0.19041\win-x64\DatTool.UI.genruntimeconfig.cache
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\obj\Release\net8.0-windows10.0.19041\win-x64\ref\DatTool.UI.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\obj\Release\net8.0-windows10.0.19041\win-x64\DatTool.UI.sourcelink.json

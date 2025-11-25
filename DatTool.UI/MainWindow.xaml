@@ -24,7 +24,7 @@
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right"
                            HorizontalContentAlignment="Right">
-                <TextBlock Text="Copyright: Yuan Xiuliang, Email: yuanxiuliang8@outlook.com, Project: https://github.com/yuanxiuliang/Quantum-Design-DAT-Data-Visualization-Tool"
+                <TextBlock Text="Copyright: Yuan Xiuliang, Email: yuanxiuliang8@outlook.com, Project: https://github.com/yuanxiuliang/Quantum-Design-DAT-Tool"
                            TextAlignment="Right" />
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right">

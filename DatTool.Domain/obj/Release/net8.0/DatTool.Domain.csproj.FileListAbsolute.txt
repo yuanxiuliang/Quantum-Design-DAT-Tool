@@ -10,3 +10,4 @@ C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\refint\DatTool.Domain.dll
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\DatTool.Domain.pdb
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\ref\DatTool.Domain.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\DatTool.Domain.sourcelink.json

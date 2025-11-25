@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatTool.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a8474081c29159841a8c2642ab8eaa7c554c0c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatTool.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatTool.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
