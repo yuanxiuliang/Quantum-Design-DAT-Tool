@@ -14,8 +14,8 @@ Rebuilt in .NET 8/WPF from the original Python utility. The app parses Quantum D
    - Most users can simply run the installer; if the system is missing .NET 8 Desktop Runtime, the setup will show a message and open the official download page.  
    - On that page, install **.NET 8 Desktop Runtime (x64)**, then re‑run the Quantum Design DAT Tool installer.
 2. **Run the installer**  
-   - Click the link below to download the setup package directly from this repository (file path: `releases/latest/QuantumDatToolSetup.exe`):  
-     [Download QuantumDatToolSetup.exe](releases/latest/QuantumDatToolSetup.exe)  
+   - Click the link below to download the setup package directly (served via GitHub’s raw file endpoint, pointing at `releases/latest/QuantumDatToolSetup.exe`):  
+     [Download QuantumDatToolSetup.exe](https://raw.githubusercontent.com/yuanxiuliang/Quantum-Design-DAT-Tool/main/releases/latest/QuantumDatToolSetup.exe)  
    - After the download finishes, double‑click `QuantumDatToolSetup.exe` (standard Windows installer) and follow the wizard.  
    - The default install path is `C:\Program Files\Quantum Design DAT Tool`, but you can change it if needed.
 3. **Launch the app**  
