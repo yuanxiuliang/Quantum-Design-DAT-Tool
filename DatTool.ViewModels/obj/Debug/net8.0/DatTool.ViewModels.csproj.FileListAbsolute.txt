@@ -1,0 +1,17 @@
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\bin\Debug\net8.0\DatTool.ViewModels.deps.json
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\bin\Debug\net8.0\DatTool.ViewModels.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\bin\Debug\net8.0\DatTool.ViewModels.pdb
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\bin\Debug\net8.0\DatTool.Domain.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\bin\Debug\net8.0\DatTool.Services.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\bin\Debug\net8.0\DatTool.Domain.pdb
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\bin\Debug\net8.0\DatTool.Services.pdb
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\DatTool.ViewModels.csproj.AssemblyReference.cache
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\DatTool.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\DatTool.ViewModels.AssemblyInfoInputs.cache
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\DatTool.ViewModels.AssemblyInfo.cs
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\DatTool.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\DatTool..D733F324.Up2Date
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\DatTool.ViewModels.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\refint\DatTool.ViewModels.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\DatTool.ViewModels.pdb
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.ViewModels\obj\Debug\net8.0\ref\DatTool.ViewModels.dll

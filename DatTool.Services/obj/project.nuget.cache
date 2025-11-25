@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "48nOebQUMvw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yuanx\\Documents\\00_Developer\\Quantum_Design_DAT_Tool\\DatTool.Services\\DatTool.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yuanx\\.nuget\\packages\\system.collections.immutable\\10.0.0\\system.collections.immutable.10.0.0.nupkg.sha512",
+    "C:\\Users\\yuanx\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.17\\microsoft.netcore.app.ref.8.0.17.nupkg.sha512",
+    "C:\\Users\\yuanx\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.17\\microsoft.windowsdesktop.app.ref.8.0.17.nupkg.sha512",
+    "C:\\Users\\yuanx\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.17\\microsoft.aspnetcore.app.ref.8.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}

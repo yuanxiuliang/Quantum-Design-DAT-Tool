@@ -1,0 +1,12 @@
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\bin\Release\net8.0\DatTool.Domain.deps.json
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\bin\Release\net8.0\DatTool.Domain.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\bin\Release\net8.0\DatTool.Domain.pdb
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\DatTool.Domain.csproj.AssemblyReference.cache
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\DatTool.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\DatTool.Domain.AssemblyInfoInputs.cache
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\DatTool.Domain.AssemblyInfo.cs
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\DatTool.Domain.csproj.CoreCompileInputs.cache
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\DatTool.Domain.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\refint\DatTool.Domain.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\DatTool.Domain.pdb
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Domain\obj\Release\net8.0\ref\DatTool.Domain.dll

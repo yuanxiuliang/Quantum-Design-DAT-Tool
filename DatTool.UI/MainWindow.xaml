@@ -1,0 +1,306 @@
+﻿<Window x:Class="DatTool.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:converters="clr-namespace:DatTool.UI.Converters"
+        mc:Ignorable="d"
+        Title="Quantum Design DAT Tool"
+        Icon="Assets/QuantumDatTool.ico"
+        Width="1080"
+        Height="720"
+        WindowStartupLocation="CenterScreen"
+        MinWidth="1080"
+        MinHeight="720">
+    <Window.Resources>
+        <converters:StringEqualsConverter x:Key="StringEqualsConverter" />
+        <converters:TailTrimmingConverter x:Key="TailTrimmingConverter" />
+    </Window.Resources>
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom" Padding="8">
+            <StatusBarItem>
+                <TextBlock Text="{Binding StatusMessage}" />
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right"
+                           HorizontalContentAlignment="Right">
+                <TextBlock Text="Copyright: Yuan Xiuliang, Email: yuanxiuliang8@outlook.com, Project: https://github.com/yuanxiuliang/Quantum-Design-DAT-Data-Visualization-Tool"
+                           TextAlignment="Right" />
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock Text="{Binding LastError}"
+                           Foreground="IndianRed" />
+            </StatusBarItem>
+        </StatusBar>
+
+        <Grid Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="12" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
+                <DockPanel LastChildFill="False">
+                    <StackPanel DockPanel.Dock="Top">
+                        <Grid Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="DAT File Path"
+                                       FontWeight="SemiBold"
+                                       VerticalAlignment="Center" />
+
+                            <Button Grid.Column="1"
+                                    Content="Open DAT"
+                                    Padding="4,3"
+                                    Width="96"
+                                    Height="28"
+                                    Click="OpenFileButton_Click" />
+
+                            <TextBlock Grid.Row="1"
+                                       Grid.ColumnSpan="2"
+                                       Text="{Binding CurrentFilePath, Converter={StaticResource TailTrimmingConverter}, ConverterParameter=40}"
+                                       Margin="12,4,0,0"
+                                       TextAlignment="Right"
+                                       TextWrapping="NoWrap" />
+                        </Grid>
+                        <TextBlock Text="Coordinate Columns" FontWeight="SemiBold" Margin="0,20,0,0" />
+                        <Grid Margin="12,4,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="X Column" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" />
+                            <ComboBox Grid.Row="0"
+                                      Grid.Column="1"
+                                      ItemsSource="{Binding AvailableColumns}"
+                                      SelectedItem="{Binding SelectedXAxisColumn}"
+                                      Margin="4,0,0,4" />
+                            <TextBlock Text="Y Column" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" />
+                            <ComboBox Grid.Row="1"
+                                      Grid.Column="1"
+                                      ItemsSource="{Binding AvailableColumns}"
+                                      SelectedItem="{Binding SelectedYAxisColumn}"
+                                      Margin="4,0,0,0" />
+                        </Grid>
+
+                        <Grid Margin="0,20,0,12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="Filter Parameters"
+                                       FontWeight="SemiBold"
+                                       VerticalAlignment="Center" />
+
+                            <Button Grid.Column="1"
+                                    Content="Apply Filter"
+                                    Padding="4,3"
+                                    Width="96"
+                                    Height="28"
+                                    Command="{Binding ApplyFilterCommand}" />
+
+                            <Grid Grid.Row="1"
+                                  Grid.ColumnSpan="2"
+                                  Margin="12,4,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="90" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="Filter Column" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" />
+                                <ComboBox Grid.Row="0"
+                                          Grid.Column="1"
+                                          ItemsSource="{Binding AvailableColumns}"
+                                          SelectedItem="{Binding FilterColumn}"
+                                          Margin="4,0,0,6" />
+
+                                <TextBlock Text="Target Mean" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" />
+                                <TextBox Grid.Row="1"
+                                         Grid.Column="1"
+                                         Text="{Binding FilterMeanInput, UpdateSourceTrigger=PropertyChanged}"
+                                         Margin="4,0,0,4" />
+
+                                <TextBlock Text="Tolerance" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" />
+                                <TextBox Grid.Row="2"
+                                         Grid.Column="1"
+                                         Text="{Binding FilterToleranceInput, UpdateSourceTrigger=PropertyChanged}"
+                                         Margin="4,0,0,4" />
+
+                                <TextBlock Text="Min Continuous Rows" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" />
+                                <TextBox Grid.Row="3"
+                                         Grid.Column="1"
+                                         Text="{Binding MinContinuousRows, UpdateSourceTrigger=PropertyChanged}"
+                                         Margin="4,0,0,0" />
+                            </Grid>
+                        </Grid>
+
+                        <Grid Margin="0,20,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="Filter Results"
+                                       FontWeight="SemiBold"
+                                       VerticalAlignment="Center" />
+
+                            <Button Grid.Column="1"
+                                    Content="Export Filt"
+                                    Padding="4,3"
+                                    Width="120"
+                                    Height="28"
+                                    Click="ExportSegmentsButton_Click" />
+
+                            <ListView Grid.Row="1"
+                                      Grid.ColumnSpan="2"
+                                      x:Name="SegmentsList"
+                                      ItemsSource="{Binding FilteredSegments}"
+                                      Margin="12,8,0,0"
+                                      SelectedItem="{Binding SelectedSegment, Mode=TwoWay}"
+                                      SelectionMode="Extended"
+                                      SelectionChanged="SegmentsList_SelectionChanged"
+                                      Height="190">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn>
+                                            <GridViewColumn.Header>
+                                                <GridViewColumnHeader Content="Mean"
+                                                                      Tag="Mean"
+                                                                      Click="SegmentsHeader_Click"
+                                                                      HorizontalContentAlignment="Center" />
+                                            </GridViewColumn.Header>
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Statistics[Mean], StringFormat=F1}"
+                                                               TextAlignment="Center" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn Width="70">
+                                            <GridViewColumn.Header>
+                                                <GridViewColumnHeader Content="Start"
+                                                                      Tag="StartRow"
+                                                                      Click="SegmentsHeader_Click"
+                                                                      HorizontalContentAlignment="Center" />
+                                            </GridViewColumn.Header>
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding StartRow}"
+                                                               TextAlignment="Center" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn Width="70">
+                                            <GridViewColumn.Header>
+                                                <GridViewColumnHeader Content="End"
+                                                                      Tag="EndRow"
+                                                                      Click="SegmentsHeader_Click"
+                                                                      HorizontalContentAlignment="Center" />
+                                            </GridViewColumn.Header>
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding EndRow}"
+                                                               TextAlignment="Center" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn Width="70">
+                                            <GridViewColumn.Header>
+                                                <GridViewColumnHeader Content="Points"
+                                                                      Tag="Points"
+                                                                      Click="SegmentsHeader_Click"
+                                                                      HorizontalContentAlignment="Center" />
+                                            </GridViewColumn.Header>
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Rows.Count}"
+                                                               TextAlignment="Center" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn>
+                                            <GridViewColumn.Header>
+                                                <GridViewColumnHeader Content="Std."
+                                                                      Tag="StdDev"
+                                                                      Click="SegmentsHeader_Click"
+                                                                      HorizontalContentAlignment="Center" />
+                                            </GridViewColumn.Header>
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Statistics[StdDev], StringFormat=F2}"
+                                                               TextAlignment="Center" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Bottom" Margin="0,20,0,0">
+                        <TextBlock Text="Plot Type" FontWeight="SemiBold" />
+                        <StackPanel Orientation="Horizontal"
+                                     Margin="16,4,0,0"
+                                     HorizontalAlignment="Right">
+                            <RadioButton Content="Line"
+                                         GroupName="PlotModeGroup"
+                                         Margin="0,0,12,0"
+                                         IsChecked="{Binding SelectedPlotMode, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Line}" />
+                            <RadioButton Content="Scatter"
+                                         GroupName="PlotModeGroup"
+                                         Margin="0,0,12,0"
+                                         IsChecked="{Binding SelectedPlotMode, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Scatter}" />
+                            <RadioButton Content="Line + Scatter"
+                                         GroupName="PlotModeGroup"
+                                         IsChecked="{Binding SelectedPlotMode, Converter={StaticResource StringEqualsConverter}, ConverterParameter=Line + Scatter}" />
+                        </StackPanel>
+                    </StackPanel>
+                </DockPanel>
+            </ScrollViewer>
+
+            <Border Grid.Column="2"
+                    Padding="12"
+                    BorderThickness="0"
+                    CornerRadius="6"
+                    Background="Transparent">
+                <oxy:PlotView x:Name="MainPlotView"
+                              Background="Transparent"
+                              BorderThickness="0"
+                              Model="{Binding PlotModel}" />
+            </Border>
+    </Grid>
+    </DockPanel>
+</Window>
+
+
+
+
+

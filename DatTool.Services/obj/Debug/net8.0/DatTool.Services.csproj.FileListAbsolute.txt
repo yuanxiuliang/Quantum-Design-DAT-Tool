@@ -1,0 +1,15 @@
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\bin\Debug\net8.0\DatTool.Services.deps.json
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\bin\Debug\net8.0\DatTool.Services.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\bin\Debug\net8.0\DatTool.Services.pdb
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\bin\Debug\net8.0\DatTool.Domain.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\bin\Debug\net8.0\DatTool.Domain.pdb
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool.Services.csproj.AssemblyReference.cache
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool.Services.AssemblyInfoInputs.cache
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool.Services.AssemblyInfo.cs
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool.Services.csproj.CoreCompileInputs.cache
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool..E496646C.Up2Date
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool.Services.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\refint\DatTool.Services.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool.Services.pdb
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\ref\DatTool.Services.dll
