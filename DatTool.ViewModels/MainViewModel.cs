@@ -46,6 +46,19 @@ public partial class MainViewModel : ObservableObject
             DefaultFont = "Arial",
             DefaultFontSize = 18
         };
+        
+        // Configure legend
+        PlotModel.Legends.Add(new OxyPlot.Legends.Legend
+        {
+            IsLegendVisible = true,
+            LegendPosition = OxyPlot.Legends.LegendPosition.TopRight,
+            LegendOrientation = OxyPlot.Legends.LegendOrientation.Vertical,
+            LegendFont = "Arial",
+            LegendFontSize = 14,
+            LegendBackground = OxyColors.Transparent,
+            LegendBorder = OxyColors.Transparent,
+            LegendBorderThickness = 0
+        });
     }
 
     public ObservableCollection<string> AvailableColumns { get; } = new();
@@ -424,7 +437,17 @@ private string? filterToleranceInput = string.Empty;
         {
             foreach (var segment in segmentsToPlot)
             {
-                var title = $"{segment.StartRow}-{segment.EndRow}";
+                string meanValue;
+                if (segment.Statistics.TryGetValue("Mean", out var mean) && mean.HasValue)
+                {
+                    meanValue = mean.Value.ToString("F1");
+                }
+                else
+                {
+                    meanValue = "N/A";
+                }
+                var filterColumnName = FilterColumn ?? "Column";
+                var title = $"{filterColumnName}={meanValue}";
                 PlotModel.Series.Add(BuildSeries(segment.Rows, SelectedXAxisColumn!, SelectedYAxisColumn!, title, plotMode));
             }
         }

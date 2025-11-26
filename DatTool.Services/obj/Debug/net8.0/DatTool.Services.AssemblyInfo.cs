@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatTool.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e945d75cf819872c10f411ce677ee9fa52af74f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+684ee0b5fca431b164148c7630d35766d7159d1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatTool.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatTool.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
