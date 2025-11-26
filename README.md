@@ -2,6 +2,8 @@
 
 Rebuilt in .NET 8/WPF from the original Python utility. The app parses Quantum Design DAT files, detects the measurement type, suggests intelligent defaults, filters stable segments, overlays charts, and exports CSV data.
 
+![Application Screenshot](截图.png)
+
 ## Runtime Requirements
 
 - Windows 10 or later
@@ -26,10 +28,21 @@ Rebuilt in .NET 8/WPF from the original Python utility. The app parses Quantum D
    - Open **Settings → Apps → Installed apps** (or **Control Panel → Programs and Features**), find **Quantum Design DAT Tool**, and uninstall it.  
    - Uninstalling removes the Start menu entry, desktop shortcut, and `.dat` file association.
 
+## Features
+
+- **Automatic Detection**: Automatically detects measurement type (PPMS/VSM) and suggests appropriate X/Y axes and filter parameters
+- **Interactive Filtering**: Filter data segments based on mean value, tolerance, and minimum continuous rows
+- **Multi-selection**: Use Shift/Ctrl to select multiple segments and overlay them on the chart
+- **Flexible Plotting**: Switch between Line, Scatter, and Line + Scatter plot types
+- **Interactive Zoom**: Left-click drag to zoom in, right-click to zoom out progressively
+- **Legend Display**: Transparent legend showing segment information (filter column name and mean value)
+- **CSV Export**: Export selected filtered segments to CSV format
+- **File Association**: Double-click `.dat` files in Windows Explorer to open them directly
+
 ## Quick Start (for portable/manual runs)
 
 1. Copy the contents of `DatTool.UI/bin/Release/net8.0-windows10.0.19041/win-x64/publish/` to the target folder.
-2. Double-click `DatTool.UI.exe` (this “portable” mode is intended for developers or advanced users; normal users should prefer the installer).
+2. Double-click `DatTool.UI.exe` (this "portable" mode is intended for developers or advanced users; normal users should prefer the installer).
 3. Click **Open DAT** on the left to pick a file (PPMS/VSM DAT files are supported).
 4. The app will:
    - Parse headers, columns, and metadata;
@@ -42,7 +55,52 @@ Rebuilt in .NET 8/WPF from the original Python utility. The app parses Quantum D
 7. Extras:
    - **Plot Type** toggles (Line / Scatter / Line + Scatter).
    - Left drag to zoom, right-click to step back out.
-   - **Export Selected** to create a CSV snapshot of chosen segments.
+   - **Export Filt** to create a CSV snapshot of chosen segments.
+
+## Usage Guide
+
+### Opening a DAT File
+
+1. Click the **Open DAT** button in the left sidebar
+2. Select a Quantum Design DAT file (`.dat` extension)
+3. The application will automatically:
+   - Parse the file structure and metadata
+   - Detect the measurement type (PPMS/VSM)
+   - Auto-select appropriate X and Y coordinate columns
+   - Suggest filter parameters based on the measurement type
+
+### Filtering Data Segments
+
+1. **Select Filter Column**: Choose the column to filter on (e.g., Temperature, Magnetic Field)
+2. **Set Target Mean** (optional): Leave empty for auto-detection, or specify a target value
+3. **Set Tolerance**: Define the acceptable range around the target mean
+4. **Set Min Continuous Rows**: Minimum number of consecutive rows that must meet the criteria
+5. Click **Apply Filter** to process the data
+6. The **Filter Results** list will display:
+   - Mean value (1 decimal place)
+   - Start and End row numbers
+   - Number of points
+   - Standard deviation (2 decimal places)
+
+### Plotting and Visualization
+
+- **Select Segments**: Click on a segment in the Filter Results list to plot it
+- **Multi-select**: Hold Shift or Ctrl and click multiple segments to overlay them
+- **Plot Types**: Use the radio buttons at the bottom of the left sidebar:
+  - **Line**: Connect data points with lines
+  - **Scatter**: Show only data points
+  - **Line + Scatter**: Combine both line and scatter
+- **Zoom Controls**:
+  - **Left-click drag**: Draw a rectangle to zoom into that area
+  - **Right-click**: Progressively zoom out to previous zoom levels
+- **Legend**: The legend in the top-right corner shows segment information in the format `{FilterColumn}={MeanValue}`
+
+### Exporting Data
+
+1. Select one or more segments in the Filter Results list
+2. Click **Export Filt** button
+3. Choose a location and filename for the CSV file
+4. The exported CSV will contain all selected segments with their data points
 
 ## FAQ
 
@@ -93,5 +151,5 @@ dotnet publish DatTool.UI/DatTool.UI.csproj -c Release -r win-x64 --self-contain
 - `DatTool.UI`: WPF/XAML views with OxyPlot-based visualization
 - `DatTool.Tests`: xUnit tests covering parser/defaults/filter logic
 
-Need new measurement presets, export formats, or installer scripts? Extend the corresponding project and rebuild. Happy hacking!***
+Need new measurement presets, export formats, or installer scripts? Extend the corresponding project and rebuild. Happy hacking!
 
