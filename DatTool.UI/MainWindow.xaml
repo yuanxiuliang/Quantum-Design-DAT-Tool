@@ -18,34 +18,16 @@
         <converters:TailTrimmingConverter x:Key="TailTrimmingConverter" />
     </Window.Resources>
     <DockPanel>
-        <StatusBar DockPanel.Dock="Bottom" Padding="8">
-            <StatusBarItem>
-                <TextBlock Text="{Binding StatusMessage}" />
-            </StatusBarItem>
-            <StatusBarItem HorizontalAlignment="Right"
-                           HorizontalContentAlignment="Right">
-                <TextBox Text="Copyright: Yuan Xiuliang, Email: yuanxiuliang8@outlook.com, Project: https://github.com/yuanxiuliang/Quantum-Design-DAT-Tool"
-                         TextAlignment="Right"
-                         IsReadOnly="True"
-                         BorderThickness="0"
-                         Background="Transparent"
-                         Padding="0"
-                         VerticalContentAlignment="Center" />
-            </StatusBarItem>
-            <StatusBarItem HorizontalAlignment="Right">
-                <TextBlock Text="{Binding LastError}"
-                           Foreground="IndianRed" />
-            </StatusBarItem>
-        </StatusBar>
-
-        <Grid Margin="12">
+        <Grid Margin="12,12,12,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300" />
                 <ColumnDefinition Width="12" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
+            <Border Grid.Column="0" Grid.ColumnSpan="2" Background="#F5F5F5" Margin="-12,0,0,0" />
+
+            <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" Background="Transparent" Padding="12,12,12,12">
                 <DockPanel LastChildFill="False">
                     <StackPanel DockPanel.Dock="Top">
                         <Grid Margin="0,0,0,8">
@@ -296,10 +278,21 @@
                     BorderThickness="0"
                     CornerRadius="6"
                     Background="Transparent">
-                <oxy:PlotView x:Name="MainPlotView"
-                              Background="Transparent"
-                              BorderThickness="0"
-                              Model="{Binding PlotModel}" />
+                <DockPanel>
+                    <TextBox DockPanel.Dock="Bottom"
+                             Text="Copyright: Yuan Xiuliang, Email: yuanxiuliang8@outlook.com, Project: https://github.com/yuanxiuliang/Quantum-Design-DAT-Tool"
+                             TextAlignment="Right"
+                             IsReadOnly="True"
+                             BorderThickness="0"
+                             Background="Transparent"
+                             Padding="0"
+                             VerticalContentAlignment="Center"
+                             Margin="0,8,0,0" />
+                    <oxy:PlotView x:Name="MainPlotView"
+                                  Background="Transparent"
+                                  BorderThickness="0"
+                                  Model="{Binding PlotModel}" />
+                </DockPanel>
             </Border>
     </Grid>
     </DockPanel>
