@@ -13,3 +13,4 @@ C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\o
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\refint\DatTool.Services.dll
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool.Services.pdb
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\ref\DatTool.Services.dll
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.Services\obj\Debug\net8.0\DatTool.Services.sourcelink.json

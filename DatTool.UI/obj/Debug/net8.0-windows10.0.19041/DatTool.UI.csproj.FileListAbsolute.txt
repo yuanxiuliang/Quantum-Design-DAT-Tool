@@ -36,3 +36,4 @@ C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\bin\Deb
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\bin\Debug\net8.0-windows10.0.19041\OxyPlot.Wpf.Shared.dll
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\obj\Debug\net8.0-windows10.0.19041\GeneratedInternalTypeHelper.g.cs
 C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\obj\Debug\net8.0-windows10.0.19041\DatTool.UI_MarkupCompile.lref
+C:\Users\yuanx\Documents\00_Developer\Quantum_Design_DAT_Tool\DatTool.UI\obj\Debug\net8.0-windows10.0.19041\DatTool.UI.sourcelink.json

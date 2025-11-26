@@ -24,8 +24,13 @@
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right"
                            HorizontalContentAlignment="Right">
-                <TextBlock Text="Copyright: Yuan Xiuliang, Email: yuanxiuliang8@outlook.com, Project: https://github.com/yuanxiuliang/Quantum-Design-DAT-Tool"
-                           TextAlignment="Right" />
+                <TextBox Text="Copyright: Yuan Xiuliang, Email: yuanxiuliang8@outlook.com, Project: https://github.com/yuanxiuliang/Quantum-Design-DAT-Tool"
+                         TextAlignment="Right"
+                         IsReadOnly="True"
+                         BorderThickness="0"
+                         Background="Transparent"
+                         Padding="0"
+                         VerticalContentAlignment="Center" />
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right">
                 <TextBlock Text="{Binding LastError}"
