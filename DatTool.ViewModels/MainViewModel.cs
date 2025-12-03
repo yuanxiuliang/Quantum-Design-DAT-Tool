@@ -307,13 +307,29 @@ private string? filterToleranceInput = string.Empty;
         var header = new List<string>();
         foreach (var segment in segmentList)
         {
+            // Get the mean value from segment statistics
+            var meanValue = segment.Statistics.TryGetValue("Mean", out var mean) && mean.HasValue
+                ? mean.Value.ToString("F2")
+                : "N/A";
+            
             foreach (var column in exportColumns)
             {
-                header.Add($"{column}({segment.StartRow}-{segment.EndRow})");
+                header.Add($"{column}({meanValue})");
             }
         }
 
         var sb = new StringBuilder();
+        
+        // Add separator declaration for Excel compatibility (must be first line)
+        sb.AppendLine("sep=,");
+        
+        // Add source file metadata
+        sb.AppendLine($"Source File:,{EscapeCsv(CurrentFilePath ?? "N/A")}");
+        
+        // Add empty line to separate metadata from data
+        sb.AppendLine();
+        
+        // Add data header
         sb.AppendLine(string.Join(",", header.Select(EscapeCsv)));
 
         var maxRows = segmentList.Max(s => s.Rows.Count);
@@ -345,6 +361,55 @@ private string? filterToleranceInput = string.Empty;
 
         await File.WriteAllTextAsync(filePath, sb.ToString(), Encoding.UTF8);
         StatusMessage = $"Exported {segmentList.Count} segments to {Path.GetFileName(filePath)}.";
+    }
+
+    public string GenerateExportFileName(IEnumerable<DataSegment> segments)
+    {
+        // Simplify column names: remove spaces, units in parentheses, and special characters
+        string SimplifyColumnName(string? columnName)
+        {
+            if (string.IsNullOrWhiteSpace(columnName))
+            {
+                return "Col";
+            }
+
+            // Remove everything in parentheses (units)
+            var withoutUnits = System.Text.RegularExpressions.Regex.Replace(columnName, @"\s*\([^)]*\)", "");
+            
+            // Remove spaces and special characters
+            var simplified = withoutUnits
+                .Replace(" ", "")
+                .Replace("[", "")
+                .Replace("]", "")
+                .Replace("/", "-")
+                .Replace("\\", "-")
+                .Replace(":", "")
+                .Replace("*", "")
+                .Replace("?", "")
+                .Replace("\"", "")
+                .Replace("<", "")
+                .Replace(">", "")
+                .Replace("|", "");
+
+            // Truncate if too long
+            return simplified.Length > 15 ? simplified.Substring(0, 15) : simplified;
+        }
+
+        var xCol = SimplifyColumnName(SelectedXAxisColumn);
+        var yCol = SimplifyColumnName(SelectedYAxisColumn);
+        var filterCol = SimplifyColumnName(FilterColumn);
+
+        // Construct simplified file name: XCol-YCol@FilterCol.csv
+        var fileName = $"{xCol}-{yCol}@{filterCol}.csv";
+
+        // Remove any remaining invalid file name characters
+        var invalidChars = Path.GetInvalidFileNameChars();
+        foreach (var c in invalidChars)
+        {
+            fileName = fileName.Replace(c, '_');
+        }
+
+        return fileName;
     }
 
     private static double? ComputeColumnMean(MeasurementSet measurement, string? columnName)

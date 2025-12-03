@@ -17,9 +17,9 @@ Rebuilt in .NET 8/WPF from the original Python utility. The app parses Quantum D
    - On that page, install **.NET 8 Desktop Runtime (x64)**, then re‑run the Quantum Design DAT Tool installer.
 2. **Run the installer**  
    <div align="center">
-     <a href="https://raw.githubusercontent.com/yuanxiuliang/Quantum-Design-DAT-Tool/main/releases/latest/QuantumDatToolSetup.exe" target="_blank"><strong>Quantum Design DAT Tool Installer</strong></a>
+     <a href="https://raw.githubusercontent.com/yuanxiuliang/Quantum-Design-DAT-Tool/main/releases/latest/QuantumDatToolSetup_v3.0.0.exe" target="_blank"><strong>Quantum Design DAT Tool Installer v3.0.0</strong></a>
    </div>
-   - After the download finishes, double‑click `QuantumDatToolSetup.exe` (standard Windows installer) and follow the wizard.  
+   - After the download finishes, double‑click `QuantumDatToolSetup_v3.0.0.exe` (standard Windows installer) and follow the wizard.  
    - The default install path is `C:\Program Files\Quantum Design DAT Tool`, but you can change it if needed.
 3. **Launch the app**  
    - Use the Start menu entry **Quantum Design DAT Tool** or the optional desktop shortcut.  
@@ -152,4 +152,36 @@ dotnet publish DatTool.UI/DatTool.UI.csproj -c Release -r win-x64 --self-contain
 - `DatTool.Tests`: xUnit tests covering parser/defaults/filter logic
 
 Need new measurement presets, export formats, or installer scripts? Extend the corresponding project and rebuild. Happy hacking!
+
+## Changelog
+
+### Version 3.0.0 (2025-12-03)
+
+**Major UI/UX Improvements:**
+- Relocated **Apply Filter** button from title bar to below filter parameters for better workflow
+- Relocated **Export Filt** button from title bar to below filter results list
+- Improved button placement and visual hierarchy
+
+**CSV Export Enhancements:**
+- Simplified export filename format: `XColumn-YColumn@FilterColumn.csv` (removed source filename and mean values from filename)
+- Added source file path metadata at the beginning of CSV files for traceability
+- Column headers now include segment mean values: `ColumnName(MeanValue)`
+- Added `sep=,` declaration on first line for automatic Excel column separation
+- Removed unit information from filename (e.g., `Temperature (K)` → `Temperature`)
+- Added empty line separator between metadata and data for better readability
+
+**Technical Changes:**
+- Installer filename now includes version number: `QuantumDatToolSetup_v3.0.0.exe`
+- Enhanced column name simplification using regex to remove units in parentheses
+- Improved CSV export format for better Excel compatibility
+
+### Version 1.0.0 (Initial Release)
+
+- Initial C# WPF implementation
+- Automatic measurement type detection (PPMS/VSM)
+- Interactive data filtering and segment selection
+- Multi-segment overlay plotting
+- CSV export functionality
+- File association for `.dat` files
+- Inno Setup installer with .NET 8 runtime detection
 

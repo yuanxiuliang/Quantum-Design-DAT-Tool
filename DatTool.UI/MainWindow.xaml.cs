@@ -102,10 +102,13 @@ public partial class MainWindow : Window
             return;
         }
 
+        // Generate default file name based on source file and selected segments
+        var defaultFileName = _viewModel.GenerateExportFileName(selectedSegments);
+
         var dialog = new SaveFileDialog
         {
             Filter = "CSV files (*.csv)|*.csv",
-            FileName = "Segments.csv",
+            FileName = defaultFileName,
             Title = "Export Filtered Segments"
         };
 

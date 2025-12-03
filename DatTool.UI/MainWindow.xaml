@@ -82,30 +82,12 @@
                                       Margin="4,0,0,0" />
                         </Grid>
 
-                        <Grid Margin="0,20,0,12">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-
+                        <StackPanel Margin="0,20,0,12">
                             <TextBlock Text="Filter Parameters"
                                        FontWeight="SemiBold"
-                                       VerticalAlignment="Center" />
+                                       Margin="0,0,0,4" />
 
-                            <Button Grid.Column="1"
-                                    Content="Apply Filter"
-                                    Padding="4,3"
-                                    Width="96"
-                                    Height="28"
-                                    Command="{Binding ApplyFilterCommand}" />
-
-                            <Grid Grid.Row="1"
-                                  Grid.ColumnSpan="2"
-                                  Margin="12,4,0,0">
+                            <Grid Margin="12,4,0,0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
@@ -142,32 +124,22 @@
                                          Text="{Binding MinContinuousRows, UpdateSourceTrigger=PropertyChanged}"
                                          Margin="4,0,0,0" />
                             </Grid>
-                        </Grid>
 
-                        <Grid Margin="0,20,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                            <Button Content="Apply Filter"
+                                    Padding="4,3"
+                                    Width="96"
+                                    Height="28"
+                                    HorizontalAlignment="Right"
+                                    Margin="0,8,0,0"
+                                    Command="{Binding ApplyFilterCommand}" />
+                        </StackPanel>
 
+                        <StackPanel Margin="0,20,0,0">
                             <TextBlock Text="Filter Results"
                                        FontWeight="SemiBold"
-                                       VerticalAlignment="Center" />
+                                       Margin="0,0,0,4" />
 
-                            <Button Grid.Column="1"
-                                    Content="Export Filt"
-                                    Padding="4,3"
-                                    Width="120"
-                                    Height="28"
-                                    Click="ExportSegmentsButton_Click" />
-
-                            <ListView Grid.Row="1"
-                                      Grid.ColumnSpan="2"
-                                      x:Name="SegmentsList"
+                            <ListView x:Name="SegmentsList"
                                       ItemsSource="{Binding FilteredSegments}"
                                       Margin="12,8,0,0"
                                       SelectedItem="{Binding SelectedSegment, Mode=TwoWay}"
@@ -249,7 +221,15 @@
                                     </GridView>
                                 </ListView.View>
                             </ListView>
-                        </Grid>
+
+                            <Button Content="Export Filt"
+                                    Padding="4,3"
+                                    Width="120"
+                                    Height="28"
+                                    HorizontalAlignment="Right"
+                                    Margin="0,8,0,0"
+                                    Click="ExportSegmentsButton_Click" />
+                        </StackPanel>
                     </StackPanel>
 
                     <StackPanel DockPanel.Dock="Bottom" Margin="0,20,0,0">

@@ -1,5 +1,5 @@
 #define MyAppName "Quantum Design DAT Tool"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "3.0.0"
 #define MyAppPublisher "Yuan Xiuliang"
 #define MyAppURL "https://github.com/yuanxiuliang/Quantum-Design-DAT-Data-Visualization-Tool"
 #define PublishDir "..\DatTool.UI\bin\Release\net8.0-windows10.0.19041\win-x64\publish"
@@ -19,7 +19,7 @@ DisableDirPage=no
 DisableProgramGroupPage=no
 ArchitecturesInstallIn64BitMode=x64
 OutputDir=..\releases\latest
-OutputBaseFilename=QuantumDatToolSetup
+OutputBaseFilename=QuantumDatToolSetup_v{#MyAppVersion}
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern

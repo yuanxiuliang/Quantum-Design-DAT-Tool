@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatTool.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+684ee0b5fca431b164148c7630d35766d7159d1e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+080e34b7fdd657deba4fe9269ae4f628bb71e6ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatTool.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatTool.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
